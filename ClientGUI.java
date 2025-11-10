@@ -1,6 +1,8 @@
 import javax.swing.*;
 import javax.swing.border.*;
 import java.awt.*;
+import handlers.*;
+import model.Request;
 
 public class ClientGUI extends JFrame {
     private JTextField campoDescripcion, campoMonto, campoSolicitante;
