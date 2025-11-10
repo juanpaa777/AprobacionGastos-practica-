@@ -27,11 +27,11 @@ AprobacionGastos-practica/
 │
 ├── Main.java                   # Cliente de consola (ejercicio guiado)
 ├── ClientGUI.java              # Cliente con interfaz gráfica
-│
-├── GUIA_PRACTICA_CONSOLA.md    # Guía detallada de la práctica
+├── MANIFEST.MF                 # Archivo manifest para JAR
+├── Ejecutable.bat              # Script de ejecución para Windows
 ├── README.md                   # Este archivo
 │
-└── [archivos de compilación]   # .class, .jar, etc.
+└── [archivos generados]        # .class (generados al compilar)
 ```
 
 ## ⚙️ Requisitos
@@ -193,11 +193,12 @@ Main-Class: ClientGUI
 
 ## 📚 Documentación
 
-- **`GUIA_PRACTICA_CONSOLA.md`**: Guía detallada paso a paso para entender el patrón Chain of Responsibility
 - **JavaDoc**: Todas las clases están documentadas con comentarios JavaDoc. Genera la documentación con:
   ```bash
   javadoc -d docs handlers/*.java model/*.java Main.java ClientGUI.java
   ```
+  
+- **Comentarios en código**: Cada clase contiene documentación JavaDoc explicando su propósito y funcionamiento
 
 ---
 
@@ -262,7 +263,26 @@ Este proyecto es parte de una práctica académica.
 
 - [Documentación Java](https://docs.oracle.com/javase/)
 - [Patrón Chain of Responsibility - Refactoring Guru](https://refactoring.guru/design-patterns/chain-of-responsibility)
-- [Guía de la Práctica](./GUIA_PRACTICA_CONSOLA.md)
+
+## 🖥️ Ejecución Rápida (Windows)
+
+Si estás en Windows, puedes usar el script `Ejecutable.bat` para compilar y crear el JAR ejecutable:
+
+```bash
+Ejecutable.bat
+```
+
+O hacer doble clic en el archivo `Ejecutable.bat` desde el explorador de archivos.
+
+**Nota:** Este script:
+1. Compila todos los archivos Java
+2. Crea el archivo MANIFEST.MF
+3. Genera el JAR ejecutable `AprobacionGastos.jar`
+
+Luego puedes ejecutar el JAR con:
+```bash
+java -jar AprobacionGastos.jar
+```
 
 ---
 
